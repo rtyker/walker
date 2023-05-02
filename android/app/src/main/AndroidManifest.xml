@@ -1,9 +1,23 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.walker">
+
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+
+
    <application
+
         android:label="walker"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
+
+<service
+                android:enabled="true"
+                android:exported="false"
+                android:foregroundServiceType="location"
+                android:name=".GeolocatorLocationService"/>
+
         <activity
             android:name=".MainActivity"
             android:exported="true"
