@@ -14,11 +14,10 @@ jobs:
 
     - name: Set up Flutter
       uses: subosito/flutter-action@v2
-
-  with:
-    channel: 'stable' # or: 'beta', 'dev' or 'master'
-    - run: flutter --version
       
+      with:
+        channel: 'stable' # or: 'beta', 'dev' or 'master'
+    - run: flutter --version
 
     - name: Get dependencies
       run: flutter pub get
